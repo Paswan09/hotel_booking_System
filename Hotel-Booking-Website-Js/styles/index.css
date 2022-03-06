@@ -1,0 +1,128 @@
+/* Content div is displayed verticaly */
+#content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+/* Search bar is aligned in the center of the div and a background image is added */
+#search {
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+}
+/* Outline does not appear around search bar when clicked */
+#searchBar:focus {
+  outline: none;
+}
+/* Search bar is styled */
+#searchBar {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 12px;
+  width: 33%;
+  height: 40px;
+  align-self: center;
+}
+#searchResult {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#searchResult a {
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+/* View More Button Styling */
+#view {
+  margin: 50px 0;
+  text-align: center;
+  height: 70px;
+  line-height: 70px;
+  vertical-align: middle;
+}
+/* Cities are displayed as a grid */
+#cities {
+  margin: 2% 0;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-row-gap: 2%;
+}
+/* container div to implement overlay */
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;
+}
+/* City image styling */
+.cityImage {
+  height: 100%;
+  width: 100%;
+  border-radius: 25%;
+}
+/* Overlay is implemented by changing opacity on hover and displaying text on hover */
+.image {
+  height: 150px;
+  width: 150px;
+  border-radius: 25%;
+  box-shadow: 10px 10px 10px grey;
+}
+.more {
+  display: none;
+}
+.text {
+  color: #f1f1f1;
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.image:hover {
+  opacity: 0.5;
+}
+.container:hover .text {
+  display: block;
+  opacity: 1;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* Page is made responsive by changing the grid based on display width */
+@media only screen and (max-width: 768px) {
+  #cities {
+    grid-template-columns: 50% 50%;
+  }
+} 
+
+@media only screen and (max-width: 575px) {
+  #cities {
+    grid-template-columns: 100%;
+  }
+  #view {
+    margin-top: 250px;
+    margin-bottom: 150px;
+  }
+} 

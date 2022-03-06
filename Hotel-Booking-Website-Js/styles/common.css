@@ -1,0 +1,71 @@
+/* body background colour, header and footer position is common for all pages and is styled accordingly */
+/* font family is also set */
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background-color: #e0e0e0;
+  font-family: "Ubuntu", sans-serif;
+}
+/* header is sticky and footer is fixed to ensure they are always present */
+header {
+  background-color: rosybrown;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 500;
+}
+footer {
+  background-color: rosybrown;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 500;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* main div will occupy the entire page */
+#Main {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+/* elements in the header and footer are common to all pages and are styled accordingly */
+#logo {
+  height: 60px;
+  width: 60px;
+  margin-left: 1%;
+}
+#loginButton {
+  margin-right: 2%;
+}
+#social {
+  margin-right: 2%;
+}
+#copyright {
+  font-size: 12px;
+}
+#contactLink {
+  margin-left: 2%;
+}
+.socialMedia {
+  height: 20px;
+  width: 22px;
+}
+#Main {
+  display: none;
+}
